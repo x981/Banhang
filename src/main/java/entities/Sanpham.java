@@ -2,7 +2,9 @@ package entities;
 
 // Generated May 21, 2016 10:13:33 AM by Hibernate Tools 3.4.0.CR1
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -77,6 +79,15 @@ public class Sanpham implements java.io.Serializable {
 
 	public void setLoaisanphams(Set<Loaisanpham> loaisanphams) {
 		this.loaisanphams = loaisanphams;
+	}
+	
+	public int sohanghoa(){
+		List<Loaisanpham> dsl = new ArrayList<Loaisanpham>(this.getLoaisanphams());
+		int tong = 0;
+		for (Loaisanpham lsp: dsl){
+			tong = tong + lsp.getHanghoas().size();
+		}
+		return tong;
 	}
 
 }

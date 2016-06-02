@@ -10,5 +10,24 @@
 		<put-attribute name="content" value="/WEB-INF/views/jsp/content.jsp"></put-attribute>
 		<put-attribute name="footer" value="/WEB-INF/views/jsp/footer.jsp"></put-attribute>
 	</definition>
+	<definition name="products" extends="home">
+		<put-attribute name="carousel" value="/WEB-INF/views/jsp/carousel_null.jsp"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/views/jsp/products.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="productdetail" extends="home">
+		<put-attribute name="carousel" value="/WEB-INF/views/jsp/carousel_null.jsp"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/views/jsp/productdetail.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="thanhtoan" extends="home">
+		<put-attribute name="carousel" value="/WEB-INF/views/jsp/carousel_null.jsp"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/views/jsp/thanhtoan.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="xemgiohang" extends="home">
+		<put-attribute name="carousel" value="/WEB-INF/views/jsp/carousel_null.jsp"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/views/jsp/thanhtoan.jsp"></put-attribute>
+	</definition>
 
 </tiles-definitions>

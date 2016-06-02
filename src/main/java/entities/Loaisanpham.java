@@ -93,5 +93,9 @@ public class Loaisanpham implements java.io.Serializable {
 	public void setHanghoas(Set<Hanghoa> hanghoas) {
 		this.hanghoas = hanghoas;
 	}
+	
+	public int sohang(){
+		return this.getHanghoas().size();
+	}
 
 }

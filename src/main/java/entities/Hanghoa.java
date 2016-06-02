@@ -31,9 +31,13 @@ public class Hanghoa implements java.io.Serializable {
 	private String thongsokt;
 	private Integer giaban;
 	private String hinhanh;
+	private String anhcon1;
+	private String anhcon2;
+	private String anhcon3;
 	private Integer solanxem;
 	private String mau;
 	private String size;
+	private int thue;
 	private String ghichu;
 	private Set<Tonkho> tonkhos = new HashSet<Tonkho>(0);
 
@@ -46,7 +50,7 @@ public class Hanghoa implements java.io.Serializable {
 
 	public Hanghoa(int mahang, Loaisanpham loaisanpham, String tenhang,
 			String dvt, String mota, String thongsokt, Integer giaban,
-			String hinhanh, Integer solanxem, String mau, String size,
+			String hinhanh, String anhcon1, String anhcon2, String anhcon3, Integer solanxem, String mau, String size, int thue,
 			String ghichu, Set<Tonkho> tonkhos) {
 		this.mahang = mahang;
 		this.loaisanpham = loaisanpham;
@@ -56,9 +60,13 @@ public class Hanghoa implements java.io.Serializable {
 		this.thongsokt = thongsokt;
 		this.giaban = giaban;
 		this.hinhanh = hinhanh;
+		this.anhcon1 = anhcon1;
+		this.anhcon2 = anhcon2;
+		this.anhcon3 = anhcon3;
 		this.solanxem = solanxem;
 		this.mau = mau;
 		this.size = size;
+		this.thue = thue;
 		this.ghichu = ghichu;
 		this.tonkhos = tonkhos;
 	}
@@ -137,6 +145,31 @@ public class Hanghoa implements java.io.Serializable {
 	public void setHinhanh(String hinhanh) {
 		this.hinhanh = hinhanh;
 	}
+	
+	@Column(name = "Anhcon1", length = 50)
+	public String getAnhcon1() {
+		return anhcon1;
+	}
+
+	public void setAnhcon1(String anhcon1) {
+		this.anhcon1 = anhcon1;
+	}
+	@Column(name = "Anhcon2", length = 50)
+	public String getAnhcon2() {
+		return anhcon2;
+	}
+
+	public void setAnhcon2(String anhcon2) {
+		this.anhcon2 = anhcon2;
+	}
+	@Column(name = "Anhcon3", length = 50)
+	public String getAnhcon3() {
+		return anhcon3;
+	}
+
+	public void setAnhcon3(String anhcon3) {
+		this.anhcon3 = anhcon3;
+	}
 
 	@Column(name = "Solanxem")
 	public Integer getSolanxem() {
@@ -163,6 +196,15 @@ public class Hanghoa implements java.io.Serializable {
 
 	public void setSize(String size) {
 		this.size = size;
+	}
+	
+	@Column(name = "Thue", length = 50)
+	public int getThue() {
+		return thue;
+	}
+
+	public void setThue(int thue) {
+		this.thue = thue;
 	}
 
 	@Column(name = "Ghichu")
